@@ -406,9 +406,9 @@ func runClusterIfNotExist(ctx context.Context, cluster config.ClusterConfig) err
 	return errors.Wrapf(err, "fail to create cluster: %s", cluster.Cluster.Name)
 }
 
-// PrepareK3sImages extracts k3s images to ~/.vela/velad/k3s/images.tg
+// PrepareK3sImages extracts k3s images to ~/.vela/velad/k3s/images.tgz
 func PrepareK3sImages() error {
-	embedK3sImage, err := resources.K3sImage.Open("static/k3s/images/k3s-airgap-images-amd64.tar.gz")
+	embedK3sImage, err := resources.K3sImage.Open("static/k3s/images/k3s-airgap-images.tar.gz")
 	if err != nil {
 		return err
 	}

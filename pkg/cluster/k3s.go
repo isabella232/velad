@@ -150,7 +150,7 @@ func fillVelaStatus(status *apis.ClusterStatus) {
 
 // PrepareK3sImages Write embed images
 func PrepareK3sImages() error {
-	embedK3sImage, err := resources.K3sImage.Open("static/k3s/images/k3s-airgap-images-amd64.tar.gz")
+	embedK3sImage, err := resources.K3sImage.Open("static/k3s/images/k3s-airgap-images.tar.gz")
 	if err != nil {
 		return err
 	}
